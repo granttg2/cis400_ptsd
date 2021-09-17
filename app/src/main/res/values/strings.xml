@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">cis400_ptsd</string>
+    <string name="app_name">Trauma Tracker</string>
+    <string name="welcome_message">Welcome Back!</string>
+    <string name="reporting">Self Reporting Survey</string>
+    <string name="spotify">Spotify Meditation</string>
+    <string name="games">Relaxing Game</string>
+    <string name="maps">Find Help Near Me</string>
 </resources>

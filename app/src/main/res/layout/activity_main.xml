@@ -1,18 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:orientation="vertical"
+    android:theme="@style/Theme.Cis400_ptsd"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/welcome_text"
+        style="@style/WelcomeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_margin="@dimen/default_gap"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/welcome_message" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:columnCount="2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageButton
+                android:id="@+id/reporting_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="1.0"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="@string/spotify"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:src="@drawable/ic_checklist" />
+        </FrameLayout>
+
+        <FrameLayout
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageButton
+                android:id="@+id/spotify_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="1.0"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="@string/spotify"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:src="@drawable/ic_spotify_logo_without_text" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageButton
+                android:id="@+id/game_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="@string/games"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:src="@drawable/ic_controller" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageButton
+                android:id="@+id/maps_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="@string/maps"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:src="@drawable/ic_map_svgrepo_com" />
+
+        </FrameLayout>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
