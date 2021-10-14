@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "cis400_ptsd"
 include ':app'
+include ':myapplication'
