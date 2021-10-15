@@ -1,14 +1,20 @@
 package com.example.cis400_ptsd;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
@@ -17,6 +23,15 @@ import com.spotify.protocol.client.Subscription;
 import com.spotify.protocol.types.PlayerState;
 import com.spotify.protocol.types.Track;
 
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Map;
+import java.util.TimeZone;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String REDIRECT_URI = "com.android.application://callback"; // Might need to be changed
     private SpotifyAppRemote mSpotifyAppRemote;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton meditation_button = findViewById(R.id.spotify_button);
         ImageButton game_button = findViewById(R.id.game_button);
         ImageButton maps_button = findViewById(R.id.maps_button);
+        TextView streak_text = findViewById(R.id.streak_text);
 
         //Set the event handler for our buttons
         reporting_button.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +76,46 @@ public class MainActivity extends AppCompatActivity {
         maps_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {switch_activities(MapMain.class);}});
+
+        //Check streak
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        Instant date = Instant.now();
+        LocalDate currDate = date.atZone(ZoneId.of(TimeZone.getDefault().getID())).toLocalDate();
+        String formattedDate = currDate.format(outputFormatter);
+
+        Map<String, ?> allPref = sharedPref.getAll();
+
+        if(allPref.isEmpty()){
+            editor.putInt("streak", 0);
+            editor.putString("checkin", formattedDate);
+            editor.apply();
+
+            streak_text.setText("Welcome!");
+        }  else{
+            int streak = (int) allPref.get("streak");
+            LocalDate lastDate = LocalDate.parse((String) allPref.get("checkin"));
+            LocalDate lowerDate = lastDate.plusDays(1);
+
+            if(lowerDate.compareTo(currDate) == 0){
+                streak += 1;
+                editor.putInt("streak", streak);
+                editor.putString("checkin", formattedDate);
+                editor.apply();
+            }else if(lowerDate.compareTo(currDate) > 0){
+                editor.putInt("streak", 0);
+                editor.putString("checkin", formattedDate);
+                editor.apply();
+            }
+
+            if(streak == 0){
+                streak_text.setText("Welcome Back!");
+            }else{
+                streak_text.setText(String.format(getString(R.string.streak), (int) allPref.get("streak")));
+            }
+        }
 
     }
 

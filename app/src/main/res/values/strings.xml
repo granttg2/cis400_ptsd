@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Trauma Tracker</string>
-    <string name="welcome_message">Welcome Back!</string>
+    <string name="welcome_message">Welcome Back</string>
     <string name="reporting">Self Reporting Survey</string>
     <string name="spotify">Spotify Meditation</string>
     <string name="games">Relaxing Game</string>
     <string name="maps">Find Help Near Me</string>
+    <string name="streak">You\'re on a %1$d day streak!</string>
+    <string name="bad_mood">Not Great</string>
+    <string name="med_mood">Could Be Better</string>
+    <string name="good_mood">Great</string>
+    <string name="feeling">How\'re you feeling?</string>
 </resources>
