@@ -5,7 +5,7 @@
     android:id="@+id/game_1_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/stars_background"
+    android:background="@drawable/starry_background"
     android:gravity="center"
     android:orientation="vertical"
     android:theme="@style/Theme.Cis400_ptsd">
@@ -69,5 +69,19 @@
         app:layout_constraintStart_toEndOf="@+id/yellowButton"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="370dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="19dp"
+        android:text="Welcome to Sand Slice!"
+        android:textColor="#F6F5F5"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

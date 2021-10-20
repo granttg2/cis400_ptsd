@@ -5,7 +5,7 @@
     android:id="@+id/game_2_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/stars_background"
+    android:background="@drawable/starry_background"
     android:gravity="center"
     android:orientation="vertical"
     android:theme="@style/Theme.Cis400_ptsd">
@@ -79,6 +79,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cup_for_sand_fill" />
+        app:srcCompat="@drawable/cup_for_sand_fill_game" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="367dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="1dp"
+        android:text="Welcome to Sand Fill!"
+        android:textColor="#F8F6F6"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

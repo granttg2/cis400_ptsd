@@ -12,5 +12,5 @@
     <string name="feeling">How\'re you feeling?</string>
     <string name="game_1_text">Sand Fill</string>
     <string name="game_2_text">Sand Slice</string>
-    <string name="games_welcome_message">Welcome to Games!</string>
+    <string name="games_welcome_message">Welcome to Games</string>
 </resources>
