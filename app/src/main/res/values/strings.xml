@@ -21,4 +21,8 @@
     <string name="national_center_for_PTSD">National Center for PTSD: (802) 296–6300</string>
     <string name="wounded_warrior">Wounded Warrior Project: (888) 997–2586</string>
     <!--Game strings-->
+    <string name="game_1_text">Sand Fill</string>
+    <string name="game_2_text">Sand Slice</string>
+    <string name="games_welcome_message">Welcome to Games</string>
+
 </resources>

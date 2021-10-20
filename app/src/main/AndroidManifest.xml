@@ -12,6 +12,9 @@
 
         <activity android:name=".Learn"/>
         <activity android:name=".GameMain"/>
+        <!-- added for the new game windows -->
+        <activity android:name=".Game1"/>
+        <activity android:name=".Game2"/>
         <activity android:name=".MapMain"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"

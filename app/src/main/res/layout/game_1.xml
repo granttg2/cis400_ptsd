@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_1_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/starry_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:theme="@style/Theme.Cis400_ptsd">
+
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="76dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginBottom="472dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="#040404"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/redButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="76dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="472dp"
+        android:backgroundTint="#F30808"
+        android:textColor="#020202"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/blueButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/yellowButton"
+        android:layout_width="76dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginBottom="472dp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="#050505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/blueButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/greenButton"
+        android:layout_width="76dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="472dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#020202"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yellowButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="370dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="19dp"
+        android:text="Welcome to Sand Slice!"
+        android:textColor="#F6F5F5"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
