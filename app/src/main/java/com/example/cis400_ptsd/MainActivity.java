@@ -19,17 +19,12 @@ import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
 
-import com.spotify.protocol.client.Subscription;
-import com.spotify.protocol.types.PlayerState;
 import com.spotify.protocol.types.Track;
 
-import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
@@ -63,11 +58,11 @@ public class MainActivity extends AppCompatActivity {
         //Set the event handler for our buttons
         reporting_button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {switch_activities(CheckListMain.class);}});
+            public void onClick(View view) {switch_activities(Learn.class);}});
 
         meditation_button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {switch_activities(GameMain.class);}});
+            public void onClick(View view) {switch_activities(MeditationMain.class);}});
 
         game_button.setOnClickListener(new View.OnClickListener() {
             @Override
