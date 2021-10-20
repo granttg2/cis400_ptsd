@@ -11,6 +11,8 @@
         android:theme="@style/Theme.Cis400_ptsd">
         <activity android:name=".CheckListMain"/>
         <activity android:name=".GameMain"/>
+        <activity android:name=".Game1"/>
+        <activity android:name=".Game2"/>
         <activity android:name=".MapMain"/>
         <activity android:name=".MeditationMain"/>
         <activity

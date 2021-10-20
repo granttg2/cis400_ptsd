@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         meditation_button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {switch_activities(GameMain.class);}});
+            public void onClick(View view) {switch_activities(MeditationMain.class);}});
 
         game_button.setOnClickListener(new View.OnClickListener() {
             @Override
