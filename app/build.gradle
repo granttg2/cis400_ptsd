@@ -14,7 +14,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [MAPS_API_KEY: "PUT_YOUR_MAP_API_KEY_HERE"]
+
     }
+
 
     buildTypes {
         release {
@@ -40,5 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation "com.google.code.gson:gson:2.8.6"
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:2.2.3'
 
 }

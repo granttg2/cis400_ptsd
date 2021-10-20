@@ -20,27 +20,26 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"></TextView>
 
-<TextView
-    android:id="@+id/veteranCrisis"
-    android:layout_width="180dp"
-    android:layout_height="0dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginBottom="9dp"
-    android:text="@string/vet_crisis_hotline"
-    app:layout_constraintBottom_toTopOf="@+id/suicideHotline"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/contacts"></TextView>
+    <TextView
+        android:id="@+id/veteranCrisis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/vet_crisis_hotline"
+        app:layout_constraintBottom_toTopOf="@+id/suicideHotline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contacts"></TextView>
 
-<TextView
-    android:id="@+id/suicideHotline"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginBottom="10dp"
-    android:text="@string/national_suicide_hotline"
-    app:layout_constraintBottom_toTopOf="@+id/nationalPTSD"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/veteranCrisis"></TextView>
+    <TextView
+        android:id="@+id/suicideHotline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/national_suicide_hotline"
+        app:layout_constraintBottom_toTopOf="@+id/nationalPTSD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/veteranCrisis"></TextView>
 
 <TextView
     android:id="@+id/nationalPTSD"
