@@ -1,4 +1,5 @@
 <resources>
+    <!--Main strings-->
     <string name="app_name">Trauma Tracker</string>
     <string name="welcome_message">Welcome Back</string>
     <string name="reporting">Self Reporting Survey</string>
@@ -10,7 +11,18 @@
     <string name="med_mood">Could Be Better</string>
     <string name="good_mood">Great</string>
     <string name="feeling">How\'re you feeling?</string>
+
+    <!--Spotify strings-->
+    <!--Map strings-->
+    <!--Contact strings-->
+    <string name="important_contacts">Important Contacts</string>
+    <string name="vet_crisis_hotline">Veteran Crisis Hotline: \n –1–800–273–8255 press 1 \n -Text 838255</string>
+    <string name="national_suicide_hotline">National Suicide Hotline: 1–800–273–8255</string>
+    <string name="national_center_for_PTSD">National Center for PTSD: (802) 296–6300</string>
+    <string name="wounded_warrior">Wounded Warrior Project: (888) 997–2586</string>
+    <!--Game strings-->
     <string name="game_1_text">Sand Fill</string>
     <string name="game_2_text">Sand Slice</string>
     <string name="games_welcome_message">Welcome to Games</string>
+
 </resources>
