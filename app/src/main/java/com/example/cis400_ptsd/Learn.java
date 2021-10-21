@@ -10,8 +10,9 @@ public class Learn extends Activity {
         setContentView(R.layout.activity_learn);
         TextView contact_text = findViewById(R.id.contacts);
         TextView vet_crisis_text = findViewById(R.id.veteranCrisis);
+        TextView center_for_ptsd_text = findViewById(R.id.nationalPTSD);
         TextView suicide_hotline_text = findViewById(R.id.suicideHotline);
-        TextView center_for_ptsd_text = findViewById(R.id.woundedWarriors);
+        TextView wounded_warrior_text = findViewById(R.id.woundedWarriors);
 
     }
 }

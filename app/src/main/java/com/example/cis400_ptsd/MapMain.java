@@ -2,7 +2,21 @@ package com.example.cis400_ptsd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.os.Bundle;
+
+
+import android.content.pm.PackageManager;
+import android.location.Location;
+
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,6 +29,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapMain extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    int REQUEST_LOCATION_PERMISSION = 1;
+    public Location mLastLocation;
+    public FusedLocationProviderClient mFusedLocationClient;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +57,17 @@ public class MapMain extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
+        LatLng cuse = new LatLng(43.0392, -76.1351);
         mMap.addMarker(new MarkerOptions()
-                .position(sydney)
-                .title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                .position(cuse)
+                .title(""));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(cuse));
+
+
     }
+
+
+
+
+
 }
