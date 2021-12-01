@@ -28,5 +28,6 @@
     <string name="game_2_text">Sand Fill</string>
     <string name="game_1_text">Sand Slice</string>
     <string name="games_welcome_message">Welcome to Games</string>
+    <string name="location_permission_denied">LOCATION DENIED</string>
 
 </resources>
