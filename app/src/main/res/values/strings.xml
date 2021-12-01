@@ -1,6 +1,6 @@
 <resources>
     <!--Main strings-->
-    <string name="app_name">Trauma Tracker</string>
+    <string name="app_name">PTSD Assistant</string>
     <string name="welcome_message">Welcome Back</string>
     <string name="reporting">Self Reporting Survey</string>
     <string name="spotify">Spotify Meditation</string>
@@ -16,6 +16,7 @@
     <!--Map strings-->
     <!--Contact strings-->
     <string name="important_contacts">Important Contacts</string>
+
     <string name="other_text">Calming Activities</string>
     <string name="vet_crisis_hotline"><a href= "https://www.veteranscrisisline.net/"> Veteran Crisis Hotline:</a> \n call : –1–800–273–8255  press 1 \n or Text 838255</string>
     <string name="national_suicide_hotline"><a href= "https://www.veteranscrisisline.net/">National Suicide Hotline:</a> 1–800–273–8255</string>
@@ -24,9 +25,13 @@
     <string name="breathing_text"><a href= "https://www.veteranscrisisline.net/">Breathing Exercises</a></string>
     <string name="meditation_text"><a href= "https://www.veteranscrisisline.net/">Meditation Techniques</a> </string>
     <string name="yoga_text"><a href= "https://www.veteranscrisisline.net/">Yoga Instruction</a> </string>
+
+
     <!--Game strings-->
     <string name="game_2_text">Sand Fill</string>
     <string name="game_1_text">Sand Slice</string>
     <string name="games_welcome_message">Welcome to Games</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
