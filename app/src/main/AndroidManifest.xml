@@ -2,9 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cis400_ptsd">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
     <queries>
         <package android:name="com.spotify.music" />
     </queries>
+
 
 
     <application
@@ -20,7 +27,8 @@
         <!-- added for the new game windows -->
         <activity android:name=".Game1"/>
         <activity android:name=".Game2"/>
-        <activity android:name=".MapMain"/>
+        <activity android:name=".MapMain"
+            />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
