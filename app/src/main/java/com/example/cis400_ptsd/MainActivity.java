@@ -2,6 +2,7 @@ package com.example.cis400_ptsd;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Set our background to be a changing gradient
-        LinearLayout main_layout = findViewById(R.id.main_layout);
+        ConstraintLayout main_layout = findViewById(R.id.main_layout);
         AnimationDrawable background_drawable = (AnimationDrawable) main_layout.getBackground();
         background_drawable.setEnterFadeDuration(3000);
         background_drawable.setExitFadeDuration(6000);
@@ -111,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
                 streak_text.setText(String.format(getString(R.string.streak), (int) allPref.get("streak")));
             }
         }
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentView, CheckIn.newInstance(), "CheckIn").commit();
 
     }
 

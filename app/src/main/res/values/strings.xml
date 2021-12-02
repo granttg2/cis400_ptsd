@@ -18,13 +18,13 @@
     <string name="important_contacts">Important Contacts</string>
 
     <string name="other_text">Calming Activities</string>
-    <string name="vet_crisis_hotline"><a href= "https://www.veteranscrisisline.net/"> Veteran Crisis Hotline:</a> \n call : –1–800–273–8255  press 1 \n or Text 838255</string>
-    <string name="national_suicide_hotline"><a href= "https://www.veteranscrisisline.net/">National Suicide Hotline:</a> 1–800–273–8255</string>
-    <string name="national_center_for_PTSD"><a href= "https://www.veteranscrisisline.net/">National Center for PTSD:</a> (802) 296–6300</string>
-    <string name="wounded_warrior"><a href= "https://www.veteranscrisisline.net/">Wounded Warrior Project:</a> (888) 997–2586</string>
-    <string name="breathing_text"><a href= "https://www.veteranscrisisline.net/">Breathing Exercises</a></string>
-    <string name="meditation_text"><a href= "https://www.veteranscrisisline.net/">Meditation Techniques</a> </string>
-    <string name="yoga_text"><a href= "https://www.veteranscrisisline.net/">Yoga Instruction</a> </string>
+    <string name="vet_crisis_hotline"><a href="https://www.veteranscrisisline.net/"> Veteran Crisis Hotline:</a> \n call : –1–800–273–8255  press 1 \n or Text 838255</string>
+    <string name="national_suicide_hotline"><a href="https://www.veteranscrisisline.net/">National Suicide Hotline:</a> 1–800–273–8255</string>
+    <string name="national_center_for_PTSD"><a href="https://www.veteranscrisisline.net/">National Center for PTSD:</a> (802) 296–6300</string>
+    <string name="wounded_warrior"><a href="https://www.veteranscrisisline.net/">Wounded Warrior Project:</a> (888) 997–2586</string>
+    <string name="breathing_text"><a href="https://www.veteranscrisisline.net/">Breathing Exercises</a></string>
+    <string name="meditation_text"><a href="https://www.veteranscrisisline.net/">Meditation Techniques</a> </string>
+    <string name="yoga_text"><a href="https://www.veteranscrisisline.net/">Yoga Instruction</a> </string>
 
 
     <!--Game strings-->

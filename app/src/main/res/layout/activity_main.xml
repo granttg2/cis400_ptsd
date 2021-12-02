@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
@@ -7,149 +7,118 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_list"
     android:gravity="center"
-    android:orientation="vertical"
     android:theme="@style/Theme.Cis400_ptsd"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/streak_text"
-        android:layout_width="match_parent"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/streak"
         android:textColor="@color/white"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/feeling"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/bad_mood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_medium"
-            android:text="@string/bad_mood"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_medium"
-            android:text="@string/med_mood"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/roboto_medium"
-            android:text="@string/good_mood"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <androidx.gridlayout.widget.GridLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
         android:background="@drawable/border"
         android:backgroundTint="@color/white"
+        android:visibility="gone"
         app:columnCount="2"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/streak_text">
 
-        <FrameLayout
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
 
-            <ImageButton
-                android:id="@+id/reporting_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="1.0"
-                android:background="@color/cardview_shadow_end_color"
-                android:contentDescription="@string/reporting"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="center"
-                android:src="@drawable/ic_checklist" />
-        </FrameLayout>
+        <ImageButton
+            android:id="@+id/reporting_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1.0"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/reporting"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:src="@drawable/ic_checklist"
+            app:layout_constraintBottom_toTopOf="@+id/game_button"
+            app:layout_constraintEnd_toStartOf="@+id/spotify_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <FrameLayout
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
 
-            <ImageButton
-                android:id="@+id/spotify_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="1.0"
-                android:background="@color/cardview_shadow_end_color"
-                android:contentDescription="@string/spotify"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="center"
-                android:src="@drawable/ic_spotify_logo_without_text" />
+        <ImageButton
+            android:id="@+id/spotify_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1.0"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/spotify"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:src="@drawable/ic_spotify_logo_without_text"
+            app:layout_constraintBottom_toTopOf="@+id/maps_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/reporting_button"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        </FrameLayout>
 
-        <FrameLayout
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
+        <ImageButton
+            android:id="@+id/game_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/games"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:src="@drawable/ic_controller"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/maps_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reporting_button" />
 
-            <ImageButton
-                android:id="@+id/game_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="1"
-                android:background="@color/cardview_shadow_end_color"
-                android:contentDescription="@string/games"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="center"
-                android:src="@drawable/ic_controller" />
 
-        </FrameLayout>
+        <ImageButton
+            android:id="@+id/maps_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            android:background="@color/cardview_shadow_end_color"
+            android:contentDescription="@string/maps"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:src="@drawable/ic_map_svgrepo_com"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/game_button"
+            app:layout_constraintTop_toBottomOf="@+id/spotify_button" />
 
-        <FrameLayout
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
 
-            <ImageButton
-                android:id="@+id/maps_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="1"
-                android:background="@color/cardview_shadow_end_color"
-                android:contentDescription="@string/maps"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="center"
-                android:src="@drawable/ic_map_svgrepo_com" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </FrameLayout>
+    <FrameLayout
+        android:id="@+id/fragmentView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_500"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.gridlayout.widget.GridLayout>
+    </FrameLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
