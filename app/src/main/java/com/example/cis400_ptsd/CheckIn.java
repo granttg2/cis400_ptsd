@@ -1,19 +1,37 @@
 package com.example.cis400_ptsd;
 
+import android.Manifest;
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Paint;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jjoe64.graphview.DefaultLabelFormatter;
 import com.jjoe64.graphview.GraphView;
@@ -39,11 +57,30 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 
 public class CheckIn extends Fragment {
+    Map<String, String> namePhoneMap = new HashMap<String, String>();
+    private Context mContext= getContext();
+    private boolean res = false;
+
+    private ActivityResultLauncher<String> mPermissionResult = registerForActivityResult(
+            new ActivityResultContracts.RequestPermission(),
+            new ActivityResultCallback<Boolean>() {
+                @Override
+                public void onActivityResult(Boolean result) {
+                    if(result) {
+                        res = true;
+                        Log.e("E", "onActivityResult: PERMISSION GRANTED");
+                    } else {
+                        Log.e("E", "onActivityResult: PERMISSION DENIED");
+                    }
+                }
+            });
+
 
     public CheckIn() {
         // Required empty public constructor
@@ -66,11 +103,15 @@ public class CheckIn extends Fragment {
         TextView mediocre = view.findViewById(R.id.mediocre_mood);
         TextView great = view.findViewById(R.id.great_mood);
 
-        Fragment currFrag = this;
+
 
         bad.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {recordMood(0);}});
+            public void onClick(View view) {
+                recordMood(0);
+                mPermissionResult.launch(Manifest.permission.READ_CONTACTS);
+                getPhoneNumbers();
+            }});
 
         mediocre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -215,10 +256,46 @@ public class CheckIn extends Fragment {
     }
 
 
+    private void getPhoneNumbers() {
+
+        Cursor phones = getContext().getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
+
+        // Loop Through All The Numbers
+        while (phones.moveToNext()) {
+
+            String name = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+            String phoneNumber = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+
+            // Cleanup the phone number
+            phoneNumber = phoneNumber.replaceAll("[()\\s-]+", "");
+
+            // Enter Into Hash Map
+            namePhoneMap.put(phoneNumber, name);
+
+        }
+
+        
+        ArrayList<String> numbers = new ArrayList<>();
+        // Get The Contents of Hash Map in Log
+        for (Map.Entry<String, String> entry : namePhoneMap.entrySet()) {
+            String key = entry.getKey();
+            numbers.add(key);
+        }
+
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:" + numbers.get((int) (Math.random() % numbers.size()))));
+        startActivity(callIntent);
+
+        phones.close();
+
+    }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_check_in, container, false);
     }
+
 }
