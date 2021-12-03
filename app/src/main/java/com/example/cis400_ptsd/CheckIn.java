@@ -61,6 +61,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class CheckIn extends Fragment {
@@ -261,16 +262,13 @@ public class CheckIn extends Fragment {
 
         Cursor phones = getContext().getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
 
-        // Loop Through All The Numbers
         while (phones.moveToNext()) {
 
             @SuppressLint("Range") String name = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
             @SuppressLint("Range") String phoneNumber = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
-            // Cleanup the phone number
             phoneNumber = phoneNumber.replaceAll("[()\\s-]+", "");
 
-            // Enter Into Hash Map
             namePhoneMap.put(phoneNumber, name);
 
         }
@@ -281,10 +279,16 @@ public class CheckIn extends Fragment {
         for (Map.Entry<String, String> entry : namePhoneMap.entrySet()) {
             String key = entry.getKey();
             numbers.add(key);
+            Log.d("d", key);
         }
 
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
-        callIntent.setData(Uri.parse("tel:" + numbers.get((int) (Math.random() % numbers.size()))));
+
+        if(numbers.size() != 0) {
+            callIntent.setData(Uri.parse("tel:" + numbers.get(ThreadLocalRandom.current().nextInt(0, numbers.size()))));
+        }else{
+            callIntent.setData(Uri.parse("tel:18002738255"));
+        }
         startActivity(callIntent);
 
         phones.close();
