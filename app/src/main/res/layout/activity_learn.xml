@@ -19,15 +19,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="150dp">
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginBottom="20dp"
             android:text="@string/important_contacts"
             android:textAlignment="center"
-            android:layout_marginStart="16dp"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/veteranCrisis"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,87 +39,77 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="10dp"
-            android:textSize="18sp"
+            android:text="@string/national_center_for_PTSD"
             android:textColorLink="@color/purple_700"
-
-            android:text="@string/national_suicide_hotline"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/nationalPTSD"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/veteranCrisis" />
 
         <TextView
-            android:layout_width="189dp"
+            android:layout_width="363dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="9dp"/>
-
-    <TextView
-        android:id="@+id/contacts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/important_contacts"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/veteranCrisis"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"></TextView>
+            android:layout_marginBottom="9dp"
+            android:text="@string/wounded_warrior"
+            android:textSize="18sp" />
 
 
-    <TextView
-        android:id="@+id/veteranCrisis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="@string/vet_crisis_hotline"
-        app:layout_constraintBottom_toTopOf="@+id/woundedWarriors"
-        app:layout_constraintStart_toStartOf="parent"></TextView>
-
-    <TextView
-        android:id="@+id/suicideHotline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="@string/national_suicide_hotline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nationalPTSD"></TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="548dp"
-        android:text="@string/national_center_for_PTSD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="592dp"
-        android:text="@string/wounded_warrior"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-  </TextView>
-
+        <TextView
+            android:id="@+id/veteranCrisis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:text="@string/vet_crisis_hotline"
             android:textSize="18sp"
-            android:textColorLink="@color/purple_700"
-            app:layout_constraintBottom_toTopOf="@+id/suicideHotline"
+            app:layout_constraintBottom_toTopOf="@+id/woundedWarriors"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/suicideHotline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:text="@string/support_groups"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contacts" />
+            app:layout_constraintTop_toBottomOf="@+id/nationalPTSD"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="548dp"
+            android:textSize="18sp"
+            android:text="SAMHSA National Hotline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="592dp"
+            android:textSize="18sp"
+            android:text="@string/wounded_warrior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        android:text="@string/vet_crisis_hotline"
+        android:textSize="18sp"
+        android:textColorLink="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/suicideHotline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contacts" />
 
         <TextView
             android:id="@+id/nationalPTSD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textSize="18sp"
-            android:textColorLink="@color/purple_700"
             android:text="@string/national_center_for_PTSD"
+            android:textColorLink="@color/purple_700"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/suicideHotline" />
 
         <TextView
@@ -127,10 +117,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textSize="18sp"
+            android:text="@string/wounded_warrior"
             android:textColorLink="@color/purple_700"
 
-            android:text="@string/wounded_warrior"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/nationalPTSD" />
 
         <TextView
@@ -138,8 +128,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textSize="30sp"
             android:text="@string/other_text"
+            android:textSize="30sp"
             app:layout_constraintTop_toBottomOf="@+id/woundedWarriors" />
 
         <TextView
@@ -147,18 +137,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textSize="18sp"
-            android:textColorLink="@color/purple_700"
             android:text="@string/breathing_text"
+            android:textColorLink="@color/purple_700"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/other" />
+
         <TextView
             android:id="@+id/meditation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textSize="18sp"
-            android:textColorLink="@color/purple_700"
             android:text="@string/meditation_text"
+            android:textColorLink="@color/purple_700"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/breathing" />
 
         <TextView
@@ -167,8 +158,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/yoga_text"
-            android:textSize="18sp"
             android:textColorLink="@color/purple_700"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@+id/meditation" />
 
 
