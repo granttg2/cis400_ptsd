@@ -2,17 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cis400_ptsd">
 
-
     <queries>
         <package android:name="com.spotify.music" />
     </queries>
 
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-
 
     <application
         android:allowBackup="true"
@@ -21,18 +17,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cis400_ptsd">
-
-        <activity android:name=".Learn"/>
-        <activity android:name=".GameMain"/>
-        <!-- added for the new game windows -->
-        <activity android:name=".Game1"/>
-        <activity android:name=".Game2"/>
-        <activity android:name=".MapMain"/>
+        <activity
+            android:name=".GameActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.noActionBar"
+            android:exported="false" />
+        <activity android:name=".Learn" />
+        <activity
+            android:name=".GameMain"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.noActionBar" />
+        <activity android:name=".Game1" />
+        <activity android:name=".Game2" />
+        <activity android:name=".MapMain" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-        <activity android:name=".MeditationMain"/>
+
+        <activity android:name=".MeditationMain" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
