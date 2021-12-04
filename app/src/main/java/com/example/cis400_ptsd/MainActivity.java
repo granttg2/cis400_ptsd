@@ -81,8 +81,11 @@ public class MainActivity extends AppCompatActivity {
         Instant date = Instant.now();
         LocalDate currDate = date.atZone(ZoneId.of(TimeZone.getDefault().getID())).toLocalDate();
         String formattedDate = currDate.format(outputFormatter);
-
+//        String formattedDate = currDate.minusDays(1).format(outputFormatter);
         Map<String, ?> allPref = sharedPref.getAll();
+//        editor.putString("checkin", formattedDate);
+//        editor.apply();
+
 
         if(allPref.isEmpty()){
             editor.putInt("streak", 0);
@@ -92,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             streak_text.setText("Welcome!");
         }  else{
             int streak = (int) allPref.get("streak");
+            Log.d("checkin",(String) allPref.get("checkin"));
             LocalDate lastDate = LocalDate.parse((String) allPref.get("checkin"));
             LocalDate lowerDate = lastDate.plusDays(1);
 
@@ -100,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putInt("streak", streak);
                 editor.putString("checkin", formattedDate);
                 editor.apply();
-            }else if(lowerDate.compareTo(currDate) > 0){
+            } else if(lowerDate.compareTo(currDate) < 0){
                 editor.putInt("streak", 0);
                 editor.putString("checkin", formattedDate);
                 editor.apply();
@@ -109,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
             if(streak == 0){
                 streak_text.setText("Welcome Back!");
             }else{
-                streak_text.setText(String.format(getString(R.string.streak), (int) allPref.get("streak")));
+                Log.d("d", String.valueOf(streak));
+                streak_text.setText(String.format(getString(R.string.streak), streak));
             }
         }
 
