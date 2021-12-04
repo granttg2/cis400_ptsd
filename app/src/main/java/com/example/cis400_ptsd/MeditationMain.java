@@ -15,7 +15,7 @@ public class MeditationMain extends Activity {
             Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.meditation);
 
         // Adding the music file to our
         // newly created object music
