@@ -36,61 +36,11 @@
         android:textSize="12sp"></TextView>
 
     <TextView
-        android:id="@+id/question2"
-        android:layout_width="247dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="2. Repeated, disturbing dreams of the stressful experience?"
-        android:textSize="12sp"></TextView>
-
-    <TextView
-        android:id="@+id/question3"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="3. Suddenly feeling or acting as if the stressful experience were actually
-        happening again?"
-        android:textSize="12sp"></TextView>
-
-    <TextView
-        android:id="@+id/question4"
-        android:layout_width="244dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="4. Feeling upset when something reminded you of the stressful experience?"
-        android:textSize="12sp"></TextView>
-
-    <TextView
-        android:id="@+id/question5"
-        android:layout_width="244dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="5. Having strong physical reactions when something reminded you
-        of the stressful experience?"
-        android:textSize="12sp"></TextView>
-
-    <TextView
-        android:id="@+id/question6"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="6. Avoiding memories, thoughts, or feelings related to
-        the stressful experience?"
-        android:textSize="12sp"></TextView>
-
-    <TextView
-        android:id="@+id/question7"
-        android:layout_width="247dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="7. Avoiding external reminders of the stressful experience?"
-        android:textSize="12sp"></TextView>
-    <TextView
         android:id="@+id/question8"
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="8. Trouble remembering important parts of the stressful experience?"
+        android:text="2. Trouble remembering important parts of the stressful experience?"
         android:textSize="12sp"></TextView>
 
     <TextView
@@ -98,14 +48,14 @@
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="9. Having strong negative beliefs about yourself, others, or the world?"
+        android:text="3. Having strong negative beliefs about yourself, others, or the world?"
         android:textSize="12sp"></TextView>
     <TextView
         android:id="@+id/question10"
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="11. Blaming yourself or another for the stressful experience or what happened
+        android:text="4. Blaming yourself or another for the stressful experience or what happened
         after?"
         android:textSize="12sp"></TextView>
     <TextView
@@ -113,14 +63,14 @@
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="11. Having negative feelings such as fear, horror, anger, guilt, or shame?"
+        android:text="5. Having negative feelings such as fear, horror, anger, guilt, or shame?"
         android:textSize="12sp"></TextView>
     <TextView
         android:id="@+id/question12"
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="12. Loss of interest in activities that you used to enjoy?"
+        android:text="6. Loss of interest in activities that you used to enjoy?"
         android:textSize="12sp"></TextView>
 
     <TextView
@@ -128,55 +78,29 @@
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="13. Feeling distant or cut off from others?"
+        android:text="7. Feeling distant or cut off from others?"
         android:textSize="12sp"></TextView>
-    <TextView
-        android:id="@+id/question14"
-        android:layout_width="237dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="14. Trouble experiencing positive feelings?"
-        android:textSize="12sp"></TextView>
+
     <TextView
         android:id="@+id/question15"
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="15. Irritable behavior, angry outbursts, or acting aggressively?"
+        android:text="8. Irritable behavior, angry outbursts, or acting aggressively?"
         android:textSize="12sp"></TextView>
     <TextView
         android:id="@+id/question16"
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="16. Taking too many risks or doing things that could cause you harm?"
+        android:text="9. Taking too many risks or doing things that could cause you harm?"
         android:textSize="12sp"></TextView>
-    <TextView
-        android:id="@+id/question17"
-        android:layout_width="237dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="17. Being extremely alert or watchful or on guard?"
-        android:textSize="12sp"></TextView>
-    <TextView
-        android:id="@+id/question18"
-        android:layout_width="237dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="18. Feeling jumpy or easily startled?"
-        android:textSize="12sp"></TextView>
-    <TextView
-        android:id="@+id/question19"
-        android:layout_width="237dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="19. Having difficulty concentrating?"
-        android:textSize="12sp"></TextView>
-    <TextView
+
+<TextView
         android:id="@+id/question20"
         android:layout_width="237dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="20. Trouble falling or staying asleep?"
+        android:text="10. Trouble falling or staying asleep?"
         android:textSize="12sp"></TextView>
 </LinearLayout>
