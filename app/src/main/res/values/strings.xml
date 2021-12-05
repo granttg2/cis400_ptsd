@@ -20,9 +20,10 @@
     <string name="vet_crisis_hotline"><a href="https://www.veteranscrisisline.net/"> Veteran Crisis Hotline:</a> \n call : 1–800–273–8255  press 1 \n or Text 838255</string>
     <string name="support_groups"><a href="https://militarysupportgroups.org/home/">Military Support Groups Of America</a></string>
     <string name="national_center_for_PTSD"><a href="https://www.veteranscrisisline.net/">National Center for PTSD:</a> (802) 296–6300</string>
-    <string name="wounded_warrior"><a href="https://www.veteranscrisisline.net/">Wounded Warrior Project:</a> (888) 997–2586</string>
-    <string name="breathing_text"><a href="https://www.veteranscrisisline.net/">Breathing Exercises</a></string>
-    <string name="meditation_text"><a href="https://www.veteranscrisisline.net/">Meditation Techniques</a> </string>
+    <string name="wounded_warrior"><a href="https://www.woundedwarriorproject.org/programs">Wounded Warrior Project:</a> (888) 997–2586</string>
+    <string name="samhsa"><a href='https://www.samhsa.gov/'>Substance Abuse and Mental Health Services Administration: </a> (1-877-726-4727) </string>
+    <string name="ptsdunited"><a href='https://ptsdunited.org/'>PTSD United </a></string>
+    <string name="nami"><a href="www.nami.org/veterans">National Alliance of Mental Illness:</a> (703) 524-7600</string>
     <string name="yoga_text"><a href="https://www.veteranscrisisline.net/">Yoga Instruction</a> </string>
 
 

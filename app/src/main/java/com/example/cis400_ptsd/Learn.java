@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Learn extends Activity {
@@ -31,6 +32,23 @@ public class Learn extends Activity {
         wounded_warrior_text.setMovementMethod(LinkMovementMethod.getInstance());
         String wwSite = "<a href='https://www.woundedwarriorproject.org/programs/warrior-care-network?gclid=Cj0KCQiAnaeNBhCUARIsABEee8UCHmpugtZT5D05gbeanCoKtjsDzW-8jTDThq0ZKprqc_nTyToq4CgaAryIEALw_wcB&gclsrc=aw.ds'>Wounded Warrior Project:</a> (888) 997–2586";
         wounded_warrior_text.setText(Html.fromHtml(wwSite));
+        TextView samhsa_text = findViewById(R.id.samhsa);
+        samhsa_text.setClickable(true);
+        samhsa_text.setMovementMethod(LinkMovementMethod.getInstance());
+        String samhsaSite = "<a href='https://www.samhsa.gov/'>Substance Abuse and Mental Health Services Administration:</a> (1-877-726-4727) ";
+        samhsa_text.setText(Html.fromHtml(samhsaSite));
+        TextView united_text = findViewById(R.id.ptsdunited);
+        united_text.setClickable(true);
+        united_text.setMovementMethod(LinkMovementMethod.getInstance());
+        String unitedSite = "<a href='https://ptsdunited.org/'>PTSD United </a>";
+        united_text.setText(Html.fromHtml(unitedSite));
+        TextView nami_text = findViewById(R.id.nami);
+        nami_text.setClickable(true);
+        nami_text.setMovementMethod(LinkMovementMethod.getInstance());
+        String namiSite = "<a href='https://www.nami.org/Your-Journey/Veterans-Active-Duty'> National Alliance of Mental Illness: </a> (703) 524-7600";
+        nami_text.setText(Html.fromHtml(namiSite));
+
+
 
     }
 }

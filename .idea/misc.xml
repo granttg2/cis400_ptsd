@@ -3,17 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
-        <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/activity_learn.xml" value="0.23125" />
+        <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/activity_learn.xml" value="0.5" />
         <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/activity_map.xml" value="0.1" />
         <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/fragment_check_in.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/fragment_wellness_checklist.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/game.xml" value="0.1" />
         <entry key="..\:/Users/janle/Documents/GitHub/cis400_ptsd/app/src/main/res/layout/meditation.xml" value="0.1" />
-=======
-        <entry key="../../../../layout/custom_preview.xml" value="0.30104166666666665" />
->>>>>>> 67858f65d1bba4ec3eacc79c51414ab32bdfe144
         <entry key="..\:/Users/janle/Downloads/cis400_ptsd/app/src/main/res/layout/activity_learn.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/janle/Downloads/cis400_ptsd/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/janle/Downloads/cis400_ptsd/app/src/main/res/layout/fragment_wellness_checklist.xml" value="0.240625" />
