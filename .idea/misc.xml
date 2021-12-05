@@ -33,7 +33,7 @@
         <entry key="app/src/main/res/layout/game_1.xml" value="0.17421875" />
         <entry key="app/src/main/res/layout/game_2.xml" value="0.17421875" />
         <entry key="app/src/main/res/layout/map.xml" value="0.2703125" />
-        <entry key="app/src/main/res/layout/meditation.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/meditation.xml" value="0.2" />
       </map>
     </option>
   </component>
